@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BDLC Motor - Physics Project</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Helvetica Neue", Arial, sans-serif;
+                background: #f5f5f5;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 40px 20px;
+                color: #1a1a1a;
+            }
+
+            .container {
+                background: white;
+                max-width: 900px;
+                width: 100%;
+                padding: 60px;
+                border: 1px solid #e0e0e0;
+                animation: fadeIn 0.6s ease-out;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .header {
+                text-align: center;
+                margin-bottom: 50px;
+                border-bottom: 2px solid #1a1a1a;
+                padding-bottom: 30px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+                color: #1a1a1a;
+                margin-bottom: 8px;
+                font-weight: 300;
+                letter-spacing: -0.5px;
+            }
+
+            .header .subtitle {
+                font-size: 0.95rem;
+                color: #666;
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 500;
+            }
+
+            .team {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+
+            .team-member {
+                color: #1a1a1a;
+                font-size: 0.9rem;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+                position: relative;
+                padding-bottom: 5px;
+            }
+
+            .team-member::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: #1a1a1a;
+                transition: width 0.3s ease;
+            }
+
+            .team-member:hover::after {
+                width: 100%;
+            }
+
+            .video-container {
+                position: relative;
+                width: 100%;
+                margin-bottom: 40px;
+                background: #000;
+                border: 1px solid #e0e0e0;
+            }
+
+            video {
+                width: 100%;
+                display: block;
+                max-height: 500px;
+            }
+
+            .play-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.05);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background 0.3s ease, opacity 0.3s ease;
+                opacity: 1;
+            }
+
+            .play-overlay:hover {
+                background: rgba(0, 0, 0, 0.1);
+            }
+
+            .play-overlay.hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .play-button {
+                width: 70px;
+                height: 70px;
+                border: 2px solid #1a1a1a;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.3s ease, background 0.3s ease;
+                background: white;
+            }
+
+            .play-overlay:hover .play-button {
+                transform: scale(1.05);
+                background: #1a1a1a;
+            }
+
+            .play-button::after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 20px solid #1a1a1a;
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+                margin-left: 4px;
+                transition: border-left-color 0.3s ease;
+            }
+
+            .play-overlay:hover .play-button::after {
+                border-left-color: white;
+            }
+
+            .info-section {
+                border-top: 1px solid #e0e0e0;
+                padding-top: 30px;
+                text-align: center;
+            }
+
+            .info-section h2 {
+                color: #1a1a1a;
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            .info-section p {
+                color: #666;
+                line-height: 1.7;
+                font-size: 0.95rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 40px 25px;
+                }
+
+                .header h1 {
+                    font-size: 2rem;
+                }
+
+                .header .subtitle {
+                    font-size: 0.85rem;
+                }
+
+                .team {
+                    gap: 25px;
+                }
+
+                .team-member {
+                    font-size: 0.85rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>BDLC Motor Project</h1>
+                <p class="subtitle">Physics Project</p>
+                <div class="team">
+                    <div class="team-member">Malak</div>
+                    <div class="team-member">Hamza</div>
+                    <div class="team-member">Miriam</div>
+                </div>
+            </div>
+
+            <div class="video-container">
+                <video id="projectVideo" controls>
+                    <source
+                        src="https://github.com/hamza-berahma/hberahma.github.io/releases/download/v1/physics_project.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+                <div class="play-overlay" id="playOverlay">
+                    <div class="play-button"></div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>About the Project</h2>
+                <p>
+                    This video demonstrates our physics project exploring the principles and
+                    functionality of a Brushless DC (BDLC) Motor. Watch to learn about
+                    electromagnetic fields, commutation, and practical applications.
+                </p>
+            </div>
+        </div>
+
+        <script>
+            const video = document.getElementById("projectVideo");
+            const overlay = document.getElementById("playOverlay");
+
+            overlay.addEventListener("click", () => {
+                video.play();
+                overlay.classList.add("hidden");
+            });
+
+            video.addEventListener("play", () => {
+                overlay.classList.add("hidden");
+            });
+
+            video.addEventListener("pause", () => {
+                if (video.currentTime === 0 || video.ended) {
+                    overlay.classList.remove("hidden");
+                }
+            });
+
+            video.addEventListener("ended", () => {
+                overlay.classList.remove("hidden");
+            });
+        </script>
+    </body>
+</html>
