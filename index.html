@@ -1,10 +1,521 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Hello Page</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Hamza Berahma</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Hello... <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">pics</a>
+    <div id="header">
+        <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+            <svg class="snowflake-icon" viewBox="0 0 2200 2100" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="nonzero" fill="currentColor" d="M 990.40625 1717.761719 L 990.40625 1610.792969 L 922.164062 1679.027344 L 853.921875 1747.257812 L 811.917969 1705.238281 L 769.910156 1663.21875 L 880.15625 1552.976562 L 990.40625 1442.734375 L 990.40625 1299.40625 C 990.40625 1220.574219 990.089844 1156.078125 989.707031 1156.078125 C 988.503906 1156.078125 742.492188 1303.960938 742.492188 1304.683594 C 742.492188 1306 667.019531 1603.636719 666.542969 1604.203125 C 665.929688 1604.933594 553.9375 1576.742188 552.515625 1575.5 C 551.589844 1574.691406 562.230469 1531.296875 590.988281 1418.609375 C 596.832031 1395.714844 597.699219 1391.105469 595.988281 1392.019531 C 594.847656 1392.628906 554.0625 1417.046875 505.351562 1446.277344 C 456.640625 1475.507812 416.515625 1499.152344 416.1875 1498.824219 C 415.140625 1497.777344 355.195312 1397.566406 355.464844 1397.3125 C 355.605469 1397.175781 397.019531 1372.292969 447.5 1342.015625 C 497.976562 1311.734375 539.382812 1286.855469 539.519531 1286.726562 C 539.65625 1286.601562 497.550781 1275.839844 445.957031 1262.816406 C 394.359375 1249.796875 351.761719 1238.8125 351.292969 1238.414062 C 350.824219 1238.011719 356.941406 1212.082031 364.890625 1180.792969 C 375.371094 1139.523438 379.796875 1123.898438 381.015625 1123.898438 C 381.9375 1123.898438 450.464844 1141.058594 533.292969 1162.039062 L 683.894531 1200.175781 L 808.546875 1125.386719 C 877.101562 1084.25 933.195312 1050.328125 933.195312 1050 C 933.195312 1049.671875 877.101562 1015.75 808.546875 974.609375 L 683.894531 899.820312 L 533.292969 937.960938 C 450.464844 958.941406 381.9375 976.101562 381.015625 976.101562 C 379.796875 976.101562 375.371094 960.480469 364.890625 919.210938 C 356.941406 887.921875 350.824219 861.988281 351.292969 861.589844 C 351.761719 861.191406 394.359375 850.199219 445.957031 837.179688 C 497.550781 824.160156 539.65625 813.398438 539.519531 813.269531 C 539.382812 813.140625 497.976562 788.269531 447.5 757.980469 C 397.019531 727.710938 355.605469 702.820312 355.464844 702.691406 C 355.195312 702.429688 415.140625 602.21875 416.1875 601.179688 C 416.519531 600.851562 456.640625 624.488281 505.351562 653.71875 C 554.0625 682.949219 594.847656 707.371094 595.988281 707.980469 C 597.699219 708.890625 596.832031 704.28125 590.988281 681.390625 C 562.230469 568.699219 551.589844 525.308594 552.515625 524.5 C 553.9375 523.261719 665.929688 495.070312 666.542969 495.789062 C 667.019531 496.359375 742.492188 794 742.492188 795.320312 C 742.492188 796.039062 988.503906 943.921875 989.707031 943.921875 C 990.089844 943.921875 990.40625 879.429688 990.40625 800.589844 L 990.40625 657.269531 L 880.15625 547.019531 L 769.910156 436.78125 L 811.917969 394.761719 L 853.921875 352.738281 L 990.40625 489.210938 L 990.40625 275.269531 L 1109.589844 275.269531 L 1109.589844 489.210938 L 1246.078125 352.738281 L 1288.078125 394.761719 L 1330.089844 436.78125 L 1219.839844 547.019531 L 1109.589844 657.269531 L 1109.589844 800.589844 C 1109.589844 879.429688 1109.910156 943.921875 1110.289062 943.921875 C 1111.5 943.921875 1357.511719 796.039062 1357.511719 795.320312 C 1357.511719 794 1432.980469 496.359375 1433.460938 495.789062 C 1434.070312 495.070312 1546.058594 523.261719 1547.480469 524.5 C 1548.410156 525.308594 1537.769531 568.699219 1509.011719 681.390625 C 1503.171875 704.28125 1502.300781 708.890625 1504.011719 707.980469 C 1505.148438 707.371094 1545.941406 682.949219 1594.648438 653.71875 C 1643.359375 624.488281 1683.480469 600.851562 1683.808594 601.179688 C 1684.859375 602.21875 1744.808594 702.429688 1744.539062 702.691406 C 1744.390625 702.820312 1702.980469 727.710938 1652.5 757.980469 C 1602.019531 788.269531 1560.621094 813.140625 1560.480469 813.269531 C 1560.339844 813.398438 1602.449219 824.160156 1654.039062 837.179688 C 1705.640625 850.199219 1748.238281 861.191406 1748.710938 861.589844 C 1749.179688 861.988281 1743.058594 887.921875 1735.109375 919.210938 C 1724.628906 960.480469 1720.199219 976.101562 1718.980469 976.101562 C 1718.058594 976.101562 1649.539062 958.941406 1566.710938 937.960938 L 1416.109375 899.820312 L 1291.449219 974.609375 C 1222.898438 1015.75 1166.808594 1049.671875 1166.808594 1050 C 1166.808594 1050.328125 1222.898438 1084.25 1291.449219 1125.386719 L 1416.109375 1200.175781 L 1566.710938 1162.039062 C 1649.539062 1141.058594 1718.058594 1123.898438 1718.980469 1123.898438 C 1720.199219 1123.898438 1724.628906 1139.523438 1735.109375 1180.792969 C 1743.058594 1212.082031 1749.179688 1238.011719 1748.710938 1238.414062 C 1748.238281 1238.8125 1705.640625 1249.796875 1654.039062 1262.816406 C 1602.449219 1275.839844 1560.339844 1286.601562 1560.480469 1286.726562 C 1560.621094 1286.855469 1602.019531 1311.734375 1652.5 1342.015625 C 1702.980469 1372.292969 1744.390625 1397.175781 1744.539062 1397.3125 C 1744.808594 1397.566406 1684.859375 1497.777344 1683.808594 1498.824219 C 1683.480469 1499.152344 1643.359375 1475.507812 1594.648438 1446.277344 C 1545.941406 1417.046875 1505.148438 1392.628906 1504.011719 1392.019531 C 1502.300781 1391.105469 1503.171875 1395.714844 1509.011719 1418.609375 C 1537.769531 1531.296875 1548.410156 1574.691406 1547.480469 1575.5 C 1546.058594 1576.742188 1434.070312 1604.933594 1433.460938 1604.203125 C 1432.980469 1603.636719 1357.511719 1306 1357.511719 1304.683594 C 1357.511719 1303.960938 1111.5 1156.078125 1110.289062 1156.078125 C 1109.910156 1156.078125 1109.589844 1220.574219 1109.589844 1299.40625 L 1109.589844 1442.734375 L 1330.089844 1663.21875 L 1288.078125 1705.238281 L 1246.078125 1747.257812 L 1177.839844 1679.027344 L 1109.589844 1610.792969 L 1109.589844 1824.730469 L 990.40625 1824.730469 Z M 990.40625 1717.761719 "/>
+            </svg>
+        </button>
+    </div>
+    <div id="wrapper">
+        <div id="picture">
+            <img id="headshot" src="profile.jpg" alt="Hamza Berahma">
+            <div id="email">Ha.Berahma<span class="email-at">[at]</span>aui.ma</div>
+            <div id="links">
+                <a class="link-left" href="CV (11).pdf">CV</a> | 
+                <a class="link-middle" href="https://github.com/hamza-berahma">Github</a> | 
+                <a class="link-middle" href="https://linkedin.com/in/hamza-berahma">LinkedIn</a> |
+                <a class="link-right" href="https://orcid.org/0009-0006-8810-0357">ORCID</a>
+            </div>
+        </div>
+
+        <div id="info">
+            <div id="scroll">
+                <h2 id="name">Hamza Berahma</h2>
+                
+                <p>
+                    CS major at Al Akhawayn University, minoring in Mathematics. My interests mainly lie in algorithms and mathematics. 
+                    I like to play chess part time, work on distributed systems and compilers, and use Arch Linux. Currently studying 
+                    mathematics and working on functional programming and C.
+                </p>
+
+                <div id="experience">
+                    <h3>Experience</h3>
+                    <div class="entry">
+                        <div class="entry-header">
+                            <h4>Summer Research Intern</h4>
+                            <span class="date">May 2025 – Jul 2025</span>
+                        </div>
+                        <div class="entry-location">Undergrad Research School (URS), Ifrane, Morocco</div>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-header">
+                            <h4>Peer Tutor</h4>
+                            <span class="date">Nov 2025 – Present</span>
+                        </div>
+                        <div class="entry-location">Center for Learning Excellence, Al Akhawayn University</div>
+                    </div>
+                </div>
+
+                <div id="awards">
+                    <h3>Awards</h3>
+                    <div class="award-item">Silver Medal at Moroccan Collegiate Programming Contest (<a href="https://icpc.global/private/person/1195974/ICPCID">ICPC</a>)</div>
+                    <div class="award-item">Full Merit Scholarship at Al Akhawayn University in Ifrane</div>
+                    <div class="award-item">Excellence Award (Top 10 Students) Dec 2025</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode toggle functionality
+        let snowflakeClickCount = 0;
+        let snowflakeClickTimeout;
+
+        function toggleDarkMode() {
+            const body = document.body;
+            const button = document.getElementById('dark-mode-toggle');
+            body.classList.toggle('dark-mode');
+            button.classList.toggle('active');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+
+            // Easter egg: Click snowflake 10 times rapidly
+            snowflakeClickCount++;
+            clearTimeout(snowflakeClickTimeout);
+            snowflakeClickTimeout = setTimeout(() => {
+                snowflakeClickCount = 0;
+            }, 2000);
+
+            if (snowflakeClickCount === 10) {
+                // Create explosion of snowflakes
+                const button = document.getElementById('dark-mode-toggle');
+                const rect = button.getBoundingClientRect();
+                for (let i = 0; i < 20; i++) {
+                    const flake = document.createElement('div');
+                    flake.innerHTML = '❅';
+                    flake.style.position = 'fixed';
+                    flake.style.left = rect.left + 'px';
+                    flake.style.top = rect.top + 'px';
+                    flake.style.fontSize = '20px';
+                    flake.style.pointerEvents = 'none';
+                    flake.style.zIndex = '10000';
+                    flake.style.transition = 'all 2s ease-out';
+                    
+                    const angle = (Math.PI * 2 * i) / 20;
+                    const distance = 200;
+                    const x = Math.cos(angle) * distance;
+                    const y = Math.sin(angle) * distance;
+                    
+                    document.body.appendChild(flake);
+                    setTimeout(() => {
+                        flake.style.transform = `translate(${x}px, ${y}px) rotate(720deg)`;
+                        flake.style.opacity = '0';
+                    }, 10);
+                    setTimeout(() => flake.remove(), 2000);
+                }
+                console.log('❄️ Snowflake explosion activated!');
+                snowflakeClickCount = 0;
+            }
+        }
+
+        // Load dark mode preference on page load
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('dark-mode-toggle').classList.add('active');
+        }
+
+        // Easter Eggs
+        let nameClickCount = 0;
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let typedText = '';
+
+        // Easter egg 1: Click name 5 times
+        document.getElementById('name').addEventListener('click', function() {
+            nameClickCount++;
+            if (nameClickCount === 5) {
+                this.style.transform = 'rotate(360deg)';
+                this.style.transition = 'transform 1s ease';
+                setTimeout(() => {
+                    this.style.transform = '';
+                    nameClickCount = 0;
+                }, 1000);
+                console.log('🎉 Easter egg activated: Name rotation!');
+            }
+        });
+
+        // Easter egg 2: Konami code
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.key);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                document.body.style.animation = 'rainbow 2s infinite';
+                console.log('🌈 Konami code activated!');
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                    konamiCode = [];
+                }, 5000);
+            }
+
+            // Easter egg: Type "snow" to toggle all snowflakes
+            typedText += e.key.toLowerCase();
+            if (typedText.length > 4) typedText = typedText.slice(-4);
+            if (typedText === 'snow') {
+                const snowflakes = document.querySelectorAll('.snowflakes .snowflake');
+                snowflakes.forEach(flake => {
+                    flake.style.animationPlayState = flake.style.animationPlayState === 'paused' ? 'running' : 'paused';
+                });
+                console.log('❄️ Snow toggle activated!');
+                typedText = '';
+            }
+
+            // Easter egg: Type "arch" for special message
+            const archCheck = typedText.slice(-4);
+            if (archCheck === 'arch') {
+                console.log('🐧 I use Arch btw!');
+                const message = document.createElement('div');
+                message.textContent = 'I use Arch btw! 🐧';
+                message.style.position = 'fixed';
+                message.style.top = '50%';
+                message.style.left = '50%';
+                message.style.transform = 'translate(-50%, -50%)';
+                message.style.background = 'rgba(0, 0, 0, 0.8)';
+                message.style.color = '#fff';
+                message.style.padding = '20px 40px';
+                message.style.borderRadius = '10px';
+                message.style.zIndex = '10001';
+                message.style.fontSize = '24px';
+                document.body.appendChild(message);
+                setTimeout(() => {
+                    message.style.opacity = '0';
+                    message.style.transition = 'opacity 1s';
+                    setTimeout(() => message.remove(), 1000);
+                }, 2000);
+                typedText = '';
+            }
+        });
+
+        // Easter egg 3: Double click profile picture
+        document.getElementById('headshot').addEventListener('dblclick', function() {
+            this.style.transform = 'scale(1.2) rotate(5deg)';
+            this.style.transition = 'transform 0.3s ease';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+            console.log('📸 Profile picture easter egg!');
+        });
+
+        // Easter egg 4: Right-click on email
+        document.getElementById('email').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            this.style.transform = 'scale(1.1)';
+            this.style.transition = 'transform 0.2s';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 200);
+            console.log('📧 Email easter egg activated!');
+            return false;
+        });
+
+        // Easter egg 5: Click snowflakes container 3 times
+        let snowflakesContainerClicks = 0;
+        document.querySelector('.snowflakes').addEventListener('click', function(e) {
+            if (e.target.classList.contains('snowflake') || e.target.classList.contains('inner')) {
+                snowflakesContainerClicks++;
+                setTimeout(() => {
+                    snowflakesContainerClicks = 0;
+                }, 3000);
+                if (snowflakesContainerClicks === 3) {
+                    // Make all snowflakes spin
+                    const allSnowflakes = document.querySelectorAll('.snowflakes .snowflake .inner');
+                    allSnowflakes.forEach(flake => {
+                        flake.style.animation = 'spin 1s linear infinite, snowflakes-fall 10s linear infinite, snowflakes-shake 3s ease-in-out infinite';
+                    });
+                    console.log('🌀 Snowflakes spin mode activated!');
+                    setTimeout(() => {
+                        allSnowflakes.forEach(flake => {
+                            flake.style.animation = 'snowflakes-fall 10s linear infinite, snowflakes-shake 3s ease-in-out infinite';
+                        });
+                    }, 5000);
+                    snowflakesContainerClicks = 0;
+                }
+            }
+        });
+
+        // Easter egg 6: Hold Shift and scroll to change snowflake speed
+        let shiftHeld = false;
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Shift') shiftHeld = true;
+        });
+        document.addEventListener('keyup', function(e) {
+            if (e.key === 'Shift') shiftHeld = false;
+        });
+        let scrollCount = 0;
+        document.addEventListener('wheel', function(e) {
+            if (shiftHeld) {
+                e.preventDefault();
+                scrollCount++;
+                const snowflakes = document.querySelectorAll('.snowflakes .snowflake .inner');
+                const speed = 5 + (scrollCount % 5) * 2; // 5s to 13s
+                snowflakes.forEach(flake => {
+                    flake.style.animationDuration = `${speed}s, 10s, 3s`;
+                });
+                if (scrollCount % 5 === 0) {
+                    console.log(`❄️ Snowflake speed changed to ${speed}s!`);
+                }
+            }
+        });
+
+        // Clever easter egg: Type "matrix" for terminal mode
+        let terminalMode = false;
+        document.addEventListener('keydown', function(e) {
+            typedText += e.key.toLowerCase();
+            if (typedText.length > 6) typedText = typedText.slice(-6);
+            
+            if (typedText === 'matrix' && !terminalMode) {
+                terminalMode = true;
+                typedText = '';
+                createTerminal();
+                console.log('💻 Terminal mode activated! Type "help" for commands.');
+            }
+        });
+
+        function createTerminal() {
+            const terminal = document.createElement('div');
+            terminal.id = 'terminal';
+            terminal.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                width: 500px;
+                height: 300px;
+                background: rgba(0, 0, 0, 0.9);
+                border: 2px solid #00ff00;
+                border-radius: 5px;
+                color: #00ff00;
+                font-family: 'Courier New', monospace;
+                font-size: 14px;
+                padding: 15px;
+                z-index: 10002;
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+                overflow-y: auto;
+            `;
+            
+            terminal.innerHTML = `
+                <div style="margin-bottom: 10px; border-bottom: 1px solid #00ff00; padding-bottom: 5px;">
+                    hamza@portfolio:~$ <span id="terminal-output"></span>
+                </div>
+                <div id="terminal-history"></div>
+                <div style="display: flex; align-items: center; margin-top: 10px;">
+                    <span>$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" 
+                           style="background: transparent; border: none; color: #00ff00; 
+                                  outline: none; margin-left: 5px; flex: 1; font-family: inherit; font-size: inherit;">
+                </div>
+            `;
+            
+            document.body.appendChild(terminal);
+            const input = document.getElementById('terminal-input');
+            const history = document.getElementById('terminal-history');
+            
+            const commands = {
+                help: () => `Available commands:
+  help        - Show this help message
+  about       - About this website
+  skills      - Technical skills
+  clear       - Clear terminal
+  matrix      - Matrix animation
+  exit        - Close terminal
+  cat CV      - View CV info
+  ls          - List sections
+  whoami      - Who am I?
+  fortune     - Random quote
+  echo [text] - Echo text`,
+                about: () => 'Personal website of Hamza Berahma. CS student at AUI, interested in algorithms, mathematics, and distributed systems.',
+                skills: () => 'Languages: Python, C/C++, Java, JavaScript, TypeScript, SQL, R\nFrameworks: PyTorch, React, Node.js, FastAPI\nTools: Git, Docker, GCP, AWS',
+                clear: () => { history.innerHTML = ''; return ''; },
+                matrix: () => { startMatrixAnimation(); return 'Matrix animation started!'; },
+                exit: () => { terminal.remove(); terminalMode = false; return ''; },
+                'cat cv': () => 'CV available at: CV (11).pdf\nFull Merit Scholarship, ICPC Silver Medal, Excellence Award',
+                ls: () => 'about  experience  projects  awards  notes  blog',
+                whoami: () => 'hamza (CS student, mathematician, chess player, Arch user)',
+                fortune: () => {
+                    const quotes = [
+                        'I use Arch btw 🐧',
+                        'The best code is no code at all.',
+                        'Premature optimization is the root of all evil.',
+                        'First, solve the problem. Then, write the code.',
+                        'There are only 10 types of people: those who understand binary and those who don\'t.',
+                        'If debugging is the process of removing bugs, then programming must be the process of putting them in.'
+                    ];
+                    return quotes[Math.floor(Math.random() * quotes.length)];
+                }
+            };
+            
+            input.focus();
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const cmd = input.value.trim().toLowerCase();
+                    let output = `$ ${input.value}\n`;
+                    
+                    if (cmd === 'clear') {
+                        history.innerHTML = '';
+                        input.value = '';
+                        return;
+                    }
+                    
+                    if (cmd.startsWith('echo ')) {
+                        output += cmd.substring(5) + '\n';
+                    } else if (commands[cmd]) {
+                        output += commands[cmd]() + '\n';
+                    } else if (cmd) {
+                        output += `Command not found: ${cmd}. Type "help" for available commands.\n`;
+                    }
+                    
+                    history.innerHTML += output;
+                    history.scrollTop = history.scrollHeight;
+                    input.value = '';
+                }
+            });
+        }
+
+        function startMatrixAnimation() {
+            const matrix = document.createElement('canvas');
+            matrix.id = 'matrix-canvas';
+            matrix.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 10001;
+                pointer-events: none;
+            `;
+            document.body.appendChild(matrix);
+            
+            const ctx = matrix.getContext('2d');
+            matrix.width = window.innerWidth;
+            matrix.height = window.innerHeight;
+            
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            const charArray = chars.split('');
+            const fontSize = 14;
+            const columns = matrix.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, matrix.width, matrix.height);
+                ctx.fillStyle = '#00ff00';
+                ctx.font = fontSize + 'px monospace';
+                
+                for (let i = 0; i < drops.length; i++) {
+                    const text = charArray[Math.floor(Math.random() * charArray.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > matrix.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            
+            const interval = setInterval(draw, 33);
+            setTimeout(() => {
+                clearInterval(interval);
+                matrix.remove();
+            }, 10000);
+        }
+
+        // Clever easter egg: Hidden Fibonacci sequence checker
+        let fibSequence = [0, 1];
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'F') {
+                e.preventDefault();
+                const isFib = checkFibonacci();
+                if (isFib) {
+                    const name = document.getElementById('name');
+                    name.style.transition = 'all 1s ease';
+                    name.style.transform = 'scale(1.1)';
+                    name.style.color = '#ff6b6b';
+                    setTimeout(() => {
+                        name.style.transform = '';
+                        name.style.color = '';
+                    }, 2000);
+                    console.log('🔢 Fibonacci sequence detected!');
+                    alert('Golden ratio detected! 🌀');
+                }
+            }
+        });
+
+        function checkFibonacci() {
+            const now = Date.now();
+            fibSequence.push(now);
+            if (fibSequence.length > 2) {
+                const diff1 = fibSequence[fibSequence.length - 1] - fibSequence[fibSequence.length - 2];
+                const diff2 = fibSequence[fibSequence.length - 2] - fibSequence[fibSequence.length - 3];
+                if (Math.abs(diff1 / diff2 - 1.618) < 0.1) {
+                    return true;
+                }
+                if (fibSequence.length > 10) fibSequence.shift();
+            }
+            return false;
+        }
+
+        // Add animations CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes rainbow {
+                0% { filter: hue-rotate(0deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+            #terminal-input::placeholder {
+                color: #00ff0055;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
